@@ -1,29 +1,24 @@
 =begin
-
-2.15. La pyramide
-Construis un programme exo_15.rb 
-qui va demander à l'utilisateur un nombre entre 1 et 25 et qui va sortir une pyramide à descendre d'autant d'étages que ce nombre.
-Voici un exemple :
-
-Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?
-> 5
-Voici la pyramide :
-#
-##
-###
-####
-#####
-
-2.16. La pyramide, dans l'autre sens
-Reprends ton programme exo_16.rb et fais un programme pyramide.rb qui montera au lieu de descendre :
+2.17. La pyramide, version expert
+Crée un programme exo_17.rb qui va demander à l'utilisateur un nombre entre 1 et 25 et qui va sortir une pyramide qui monte et qui descend, comme montré ci-dessous :
 
 Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?
 > 5
 Voici la pyramide :
     #
-   ##
-  ###
- ####
-#####
-
+   ###
+  #####
+ #######
+#########
 =end
+
+
+puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
+print "> "
+nb_Floors = gets.to_i
+return if nb_Floors < 0 || nb_Floors > 25
+1.upto(nb_Floors) do |floor|
+  puts " " * (nb_Floors - 1) + "#" * (floor * 2 - 1)
+  nb_Floors -= 1
+
+end

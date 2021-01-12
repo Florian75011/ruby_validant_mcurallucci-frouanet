@@ -11,8 +11,8 @@ user_age = Time.now.year - user_birthyear
 
  i = 1
 
-    while user_birthyear < Time.now.year
-puts "En l'année #{user_birthyear} tu avais #{i} ans !"
-i += 1
-user_birthyear += 1
+while user_birthyear < Time.now.year
+    puts "En l'année #{user_birthyear} tu avais #{i} ans !"
+    i += 1
+    user_birthyear += 1
 end
