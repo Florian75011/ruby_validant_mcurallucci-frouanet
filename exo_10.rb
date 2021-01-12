@@ -16,7 +16,3 @@ puts "En l'année #{user_birthyear} tu avais #{i} ans !"
 i += 1
 user_birthyear += 1
 end
-
-
-
-

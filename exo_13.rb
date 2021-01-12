@@ -5,7 +5,6 @@
 # "jean.dupont.02@email.fr"
 # etc..
 
-
 (0...51).each { |index| puts "jean.dupont.#{index}@email.fr" }
 
 =begin

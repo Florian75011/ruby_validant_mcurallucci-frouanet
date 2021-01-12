@@ -4,21 +4,11 @@ Le programme exo_10.rb est cool, mais on peut l'améliorer.
 pour chaque année depuis sa naissance, dira "Il y a X ans, tu avais Y ans".
 =end
 
-puts "Peux-tu entrer ton âge s'il te plaît ?"
+puts "Bonjour, quelle est ton année de naissance ?"
 print "> "
-user_age = gets.to_i
-
-
-=begin exo_10 :
-puts "Peux-tu entrer ton année de naissance s'il te plaît ?"
-print "> "
-user_birthyear = gets.to_i
-user_age = Time.now.year - user_birthyear
-
- i = 1
-
-    while user_birthyear < Time.now.year
-puts "En l'année #{user_birthyear} tu avais #{i} ans !"
-i += 1
-user_birthyear += 1
-=end
+year = gets.to_i
+current_year = Time.now.year
+current_year.downto(year).each_with_index do |annee, i|
+    puts "il y a  #{i} ans tu avais #{current_year - year} ans"
+    year += 1
+end
